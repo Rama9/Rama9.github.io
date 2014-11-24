@@ -341,6 +341,8 @@ function preferOpus(sdp) {
     }
   }
 
+  console.log ( "CN line is: ", mLineIndex );
+
   // Remove CN in m line and sdp.
   sdpLines = removeCN(sdpLines, mLineIndex);
 
