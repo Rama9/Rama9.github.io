@@ -322,6 +322,7 @@ function preferOpus(sdp) {
   // Search for m line.
   for (var i = 0; i < sdpLines.length; i++) {
       if (sdpLines[i].search('m=audio') !== -1) {
+        console.log ( "CN line is 1: ", mLineIndex );
         mLineIndex = i;
         break;
       }
@@ -330,6 +331,8 @@ function preferOpus(sdp) {
     return sdp;
   }
 
+
+  console.log ( "CN line is 2: ", mLineIndex );
   // If Opus is available, set it as the default in m line.
   for (i = 0; i < sdpLines.length; i++) {
     if (sdpLines[i].search('opus/48000') !== -1) {
@@ -341,7 +344,7 @@ function preferOpus(sdp) {
     }
   }
 
-  console.log ( "CN line is: ", mLineIndex );
+  console.log ( "CN line is 3: ", mLineIndex );
 
   // Remove CN in m line and sdp.
   sdpLines = removeCN(sdpLines, mLineIndex);
