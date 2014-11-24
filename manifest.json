@@ -1,0 +1,31 @@
+{
+  "name": "WebRTC Chat",
+  "description": "WebRTC Chat Sample freedom.js application",
+  "app": {
+    "script": "main.js",
+    "index": "index.html",
+    "static": [ 
+      "freedom_backend/style.css",
+      "ux.js"
+    ]
+  },
+  "dependencies": {
+    "socialprovider": {
+      "url": "freedom_backend/social.ws.json",
+      "api": "social"
+    }
+  },
+  "provides": ["chat"],
+  "default": "chat",
+  "api": {
+    "chat": {
+      "send": {"type": "method", "value": ["string", "string"]},
+      "recv-status": {"type": "event", "value": "string"},
+      "recv-err": {"type": "event", "value": {"message": "string"}},
+      "recv-message": {"type": "event", "value": {"message": "string", "from": {"userId": "string"}}},
+      "recv-buddylist": {"type": "event", "value": "object"},
+      "recv-uid": {"type": "event", "value": "string"},
+      "new-join": {"type": "event", "value": "string"}
+    }
+  }
+}
