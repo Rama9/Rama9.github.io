@@ -50,9 +50,9 @@ function start(instance) {
        getUserMedia(constraints, handleUserMedia, handleUserMediaError);
 //   }
 
-   if (location.hostname != "localhost") {
+ /*  if (location.hostname != "localhost") {
       requestTurn('https://computeengineondemand.appspot.com/turn?username=41784574&key=4080218913');
-   }
+   }*/
 
    function maybeStart(shouldCall) {
      if (typeof localStream != 'undefined') {
@@ -237,7 +237,7 @@ function start(instance) {
       }
    }
 
-function requestTurn(turn_url) {
+/*function requestTurn(turn_url) {
   var turnExists = false;
   for (var i in pc_config.iceServers) {
     if (pc_config.iceServers[i].url.substr(0, 5) === 'turn:') {
@@ -264,7 +264,7 @@ function requestTurn(turn_url) {
     xhr.open('GET', turn_url, true);
     xhr.send();
   }
-}
+}*/
    
    function handleRemoteStreamAdded(event) {
       console.log('Remote stream added.');
