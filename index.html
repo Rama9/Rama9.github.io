@@ -25,26 +25,33 @@
         font-family: helvetica; 
         float:left;
        }
-  #buddylist {padding: 5px; margin-left:-5px; min-width: 150px;}
+  #buddylist {padding: 5px; 
+              margin-left:-5px; 
+              min-width: 150px;
+              border: 1px solid #C0C0C0;
+             }
   #msg-input {
               width:300px; 
               margin:0;
               position: absolute;
               bottom: 0;
               right: 0;
-              height: 50px;
+              height: 30px;
+              border: 1px solid black;
              }
   #chat {
-                height: 1000px; 
+                height: 480px; 
                 position: absolute;
                 top: 0;
                 left: 640px;
                 width: 480px;
                }
   #messagelist {
-                  height: auto;
+                  height: 420px;
                   width: 300px;
                   overflow-y: scroll;
+                  float: right;
+                  border: 1px dotted black;
                }
                  
   #container {position: relative; height: 960px;}
@@ -65,13 +72,11 @@
       <video id='localVideo' autoplay muted width="640" height="480"></video>
     </div>
     <div id="chat">
+        <div id='buddylist'></div>
     	<div id='messagelist' class='text'></div>
     	<div id='uid'>Logging In</div>
     	<input id='msg-input' type='text' placeholder='Type message here'/>
     </div>
-  <section id='buddylist'>
-  </section>
-
   <div id='container'>
 
     <div id = 'remoteVideos'>
