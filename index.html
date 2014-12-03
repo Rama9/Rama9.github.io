@@ -10,6 +10,12 @@
   <script type='text/javascript' src='lib/adapter.js'></script>
 
   <style type='text/css'>
+  #heading {
+            background-color: #C0C0C0; 
+            height: 50px;
+            text-color: black;
+            text-align: center;
+           } 
   section {border: 1px solid black; position:relative; display: inline-block; vertical-align:top;}
   #uid {font-family: helvetica; float:left;}
   #buddylist {padding: 5px; margin-left:-5px; min-width: 150px;}
@@ -22,9 +28,11 @@
 </head>
 
 <body>
-  <header id='logo'>freedom.js</header>
-  <header><span class='triangle'>&#9654;</span> Demos</header>
-  <header><span class='triangle'>&#9654;</span> Video Chat</header>
+  <div id="heading">
+    <header>freedom.js</header>
+    <header><span class='triangle'>&#9654;</span> Demos</header>
+    <header><span class='triangle'>&#9654;</span> Video Chat</header>
+  </div>
   <div style='clear:both; height:15px;'></div>
   <section>
     <div id='messagelist' class='text'></div>
