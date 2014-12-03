@@ -26,7 +26,7 @@ function start(instance) {
 
   document.getElementById('msg-input').focus();
 
-  var localVideo, videos;
+  var localVideo, videos, localVideos;
 
   function handleUserMedia(stream) {
      console.log('Adding local stream.');
@@ -47,6 +47,7 @@ function start(instance) {
        var constraints = {video: true};
        localVideo = document.querySelector('#localVideo');
        videos = document.querySelector('#remoteVideos');
+       localVideos = document.querySelector('#localVideos');
        getUserMedia(constraints, handleUserMedia, handleUserMediaError);
 //   }
 
@@ -272,7 +273,6 @@ function start(instance) {
       var remoteVideo = document.createElement('video');
       remoteVideo.setAttribute('id','"remoteVideo_" + remoteClientID');
       remoteVideo.autoplay = 'true';
-      remoteVideo.onclick = function() { alert('Hello'); };
 
       remoteVideo.src = window.URL.createObjectURL(event.stream);
       videos.appendChild(remoteVideo);
@@ -282,6 +282,8 @@ function start(instance) {
          child.height = '200';
          console.log(child.width);
       }
+      remoteVideo.onclick = function() {remoteVideo.appendTo("#localVideos");
+                localVideo.appendTo("#remoteVideos");};
       console.log(videos.childNodes.length);
       remoteStream = event.stream;
     }
