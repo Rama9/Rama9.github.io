@@ -16,11 +16,21 @@
             text-color: black;
             text-align: center;
            } 
+  #content {
+            position: relative;
+           }
   section {border: 1px solid black; position:relative; display: inline-block; vertical-align:top;}
   #uid {font-family: helvetica; float:left;}
   #buddylist {padding: 5px; margin-left:-5px; min-width: 150px;}
   #msg-input {width:700px; margin:0;}
-  #messagelist {height: 400px; overflow-y: scroll; padding-left: 5px;}
+  #messagelist {
+                height: 240px; 
+                overflow-y: scroll; 
+                position: absolute;
+                top: 0;
+                left: 640;
+                width: 300px;
+               }
   #container {position: relative; height: 960px;}
   #localVideos {height: 480px;}
   #remoteVideos {position: absolute; left: 0; bottom: 200px}
@@ -34,23 +44,23 @@
     <header><span class='triangle'>&#9654;</span> Video Chat</header>
   </div>
   <div style='clear:both; height:15px;'></div>
-  <section>
+  <div id="content">
+    <div id = 'localVideos'>
+      <video id='localVideo' autoplay muted width="640" height="480"></video>
+    </div>
     <div id='messagelist' class='text'></div>
     <div id='uid'>Logging In</div>
     <input id='msg-input' type='text' placeholder='Type message here'/>
-  </section>
   <section id='buddylist'>
   </section>
 
   <div id='container'>
 
-    <div id = 'localVideos'>
-      <video id='localVideo' autoplay muted width="640" height="480"></video>
-    </div>
     <div id = 'remoteVideos'>
       <video id='remoteVideo' autoplay></video>
     </div>
   </div>
+</div>
 
 </body>
 </html>
