@@ -15,6 +15,9 @@
   #buddylist {padding: 5px; margin-left:-5px; min-width: 150px;}
   #msg-input {width:700px; margin:0;}
   #messagelist {height: 400px; overflow-y: scroll; padding-left: 5px;}
+  #container {position: relative;}
+  #localVideos {height: 480px;}
+  #remoteVideos {position: absolute; left: 0; bottom: 200px}
   </style>
 </head>
 
@@ -33,10 +36,10 @@
 
   <div id='container'>
 
-    <span id = 'localVideos'>
+    <div id = 'localVideos'>
       <video id='localVideo' autoplay muted width="640" height="480"></video>
     </span>
-    <span id = 'remoteVideos'>
+    <div id = 'remoteVideos'>
       <video id='remoteVideo' autoplay></video>
     </span>
   </div>
