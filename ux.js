@@ -272,8 +272,8 @@ function start(instance) {
       var remoteVideo = document.createElement('video');
       remoteVideo.setAttribute('id','"remoteVideo_" + remoteClientID');
       remoteVideo.autoplay = 'true';
+      remoteVideo.onclick = function() { alert('Hello'); };
 
-    //console.log('"I am video child remoteVideo_ " + remoteClientID');
       remoteVideo.src = window.URL.createObjectURL(event.stream);
       videos.appendChild(remoteVideo);
       for(var i=0; i<videos.childNodes.length; i++) {

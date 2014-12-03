@@ -10,57 +10,60 @@
   <script type='text/javascript' src='lib/adapter.js'></script>
 
   <style type='text/css'>
-  #heading {
-            background-color: #C0C0C0; 
-            height: 50px;
-            text-color: black;
-            text-align: center;
-           } 
-  #content {
-            position: relative;
-            height: 1000px;
-           }
-  #uid {
-        font-family: helvetica; 
-        float: right;
-       }
-  #buddylist {padding: 5px; 
-              min-width: 150px;
-              border: 1px solid #C0C0C0;
-              float: left;
-              background-color: #F5F5DC;
-             }
-  #msg-input {
-              width:300px; 
-              margin:0;
-              position: absolute;
-              bottom: 0;
-              right: 0;
-              height: 30px;
-              border: 1px solid black;
-              background-color: #FAFAD2;         
-            }
-  #chat {
-                height: 480px; 
-                position: absolute;
-                top: 0;
-                left: 640px;
-                width: 480px;
-               }
-  #messagelist {
-                  height: 420px;
-                  width: 300px;
-                  overflow-y: scroll;
-                  float: right;
-                  border: 1px solid #C0C0C0;
-                  background-color: #FAF0E6;
-               }
-                 
-  #localVideos {height: 480px;}
-  #remoteVideos {
-                 position: absolute; 
-                 left: 0; 
-                 bottom: 200px}
+    #heading {
+      background-color: #C0C0C0; 
+      height: 50px;
+      text-color: black;
+      text-align: center;
+    } 
+    #content {
+      position: relative;
+      height: 1000px;
+    }
+    #uid {
+      font-family: helvetica; 
+      float: right;
+    }
+    #buddylist {
+      padding: 5px; 
+      min-width: 150px;
+      border: 1px solid #C0C0C0;
+      float: left;
+      background-color: #F5F5DC;
+    }
+    #msg-input {
+      width:300px; 
+      margin:0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 30px;
+      border: 1px solid black;
+      background-color: #FAFAD2;         
+    }
+    #chat {
+      height: 480px; 
+      position: absolute;
+      top: 0;
+      left: 640px;
+      width: 480px;
+    }
+    #messagelist {
+      height: 420px;
+      width: 300px;
+      overflow-y: scroll;
+      float: right;
+      border: 1px solid #C0C0C0;
+      background-color: #F5F5DC;
+    }
+    #localVideos {
+      height: 480px;
+    }
+    #remoteVideos {
+      position: absolute; 
+      left: 0; 
+      bottom: 300px
+    }
   </style>
 </head>
 
@@ -76,10 +79,10 @@
       <video id='localVideo' autoplay muted width="640" height="480"></video>
     </div>
     <div id="chat">
-        <div id='buddylist'></div>
-    	<div id='uid'>Logging In</div>
-    	<div id='messagelist' class='text'></div>
-    	<input id='msg-input' type='text' placeholder='Type message here'/>
+      <div id='buddylist'></div>
+      <div id='uid'>Logging In</div>
+      <div id='messagelist' class='text'></div>
+      <input id='msg-input' type='text' placeholder='Type message here'/>
     </div>
     <div id = 'remoteVideos'>
     </div>
