@@ -18,19 +18,35 @@
            } 
   #content {
             position: relative;
+            height: 1000px;
            }
   section {border: 1px solid black; position:relative; display: inline-block; vertical-align:top;}
-  #uid {font-family: helvetica; float:left;}
+  #uid {
+        font-family: helvetica; 
+        float:left;
+       }
   #buddylist {padding: 5px; margin-left:-5px; min-width: 150px;}
-  #msg-input {width:700px; margin:0;}
-  #messagelist {
-                height: 240px; 
-                overflow-y: scroll; 
+  #msg-input {
+              width:300px; 
+              margin:0;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              height: 50px;
+             }
+  #chat {
+                height: 1000px; 
                 position: absolute;
                 top: 0;
-                left: 640;
-                width: 300px;
+                left: 640px;
+                width: 480px;
                }
+  #messagelist {
+                  height: auto;
+                  width: 300px;
+                  overflow-y: scroll;
+               }
+                 
   #container {position: relative; height: 960px;}
   #localVideos {height: 480px;}
   #remoteVideos {position: absolute; left: 0; bottom: 200px}
@@ -48,9 +64,11 @@
     <div id = 'localVideos'>
       <video id='localVideo' autoplay muted width="640" height="480"></video>
     </div>
-    <div id='messagelist' class='text'></div>
-    <div id='uid'>Logging In</div>
-    <input id='msg-input' type='text' placeholder='Type message here'/>
+    <div id="chat">
+    	<div id='messagelist' class='text'></div>
+    	<div id='uid'>Logging In</div>
+    	<input id='msg-input' type='text' placeholder='Type message here'/>
+    </div>
   <section id='buddylist'>
   </section>
 
