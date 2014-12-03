@@ -66,6 +66,33 @@
       left: 0; 
       bottom: 300px
     }
+    #room {
+      height: 30px; 
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300px;
+    }
+    #createRoom {
+      width:150px; 
+      margin:0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 30px;
+      border: 1px solid black;
+      background-color: #FAFAD2;         
+    }
+    #joinRoom {
+      width:150px; 
+      margin:0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 30px;
+      border: 1px solid black;
+      background-color: #FAFAD2;         
+    }
   </style>
 </head>
 
@@ -85,6 +112,10 @@
       <div id='uid'>Logging In</div>
       <div id='messagelist' class='text'></div>
       <input id='msg-input' type='text' placeholder='Type message here'/>
+    </div>
+    <div id="room">
+       <input id='createRoom' type='text' placeholder='Create room here' />
+       <input id='joinRoom' type='text' placeholder='Join room here' />
     </div>
     <div id = 'remoteVideos'>
     </div>

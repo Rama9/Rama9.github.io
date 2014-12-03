@@ -29,7 +29,7 @@ var Chat = function (dispatchEvent) {
  * sent messages should be forwarded to the Social provider.
  **/
 Chat.prototype.send = function (to, message) {
-  logger.log("Intercepted message: ", to, message);
+//  logger.log("Intercepted message: ", to, message);
   return this.social.sendMessage(to, message);
 };
 
