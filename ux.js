@@ -283,7 +283,7 @@ function start(instance) {
          console.log(child.width);
       }
       remoteStream = event.stream;
-      remoteVideo.onclick = function() {
+      /* remoteVideo.onclick = function() {
                 localVideo.width = '200';
                 localVideo.height = '200';
                 localVideo.autoplay = 'true';
@@ -294,7 +294,7 @@ function start(instance) {
                 remoteVideo.src = window.URL.createObjectURL(localStream);
                 localVideos.appendChild(remoteVideo);
                 videos.appendChild(localVideo);
-                };
+                };*/
       console.log(videos.childNodes.length);
     }
 
